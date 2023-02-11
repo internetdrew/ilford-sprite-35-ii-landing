@@ -4,8 +4,8 @@
 <header>
   <div class='container'>
     <div class='intro'>
-      <h1>Ilford Sprite 35 II</h1>
-      <p>The indispensible 35mm camera</p>
+      <h1>Ilford Sprite 35-II</h1>
+      <p>Like a disposable... but reusable.</p>
     </div>
   </div>
 </header>
@@ -14,7 +14,12 @@
   header {
     display: flex;
     justify-content: center;
-    padding: 4rem;
+    padding: 6rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 800;
   }
 
   .intro {
@@ -24,7 +29,7 @@
   }
 
   .intro h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 800;
   }
 
@@ -33,7 +38,18 @@
     text-align: center;
   }
 
+  #wavy {
+    text-decoration: line-through;
+    text-decoration-color: #c92a2a;
+    text-decoration-style: wavy;
+    rotate: 45deg;
+  }
+
   @media (max-width: 768px) {
+    .logo {
+      font-size: 1.4rem;
+      padding-bottom: 1rem;
+    }
     .intro h1 {
       font-size: 1.6rem;
     }

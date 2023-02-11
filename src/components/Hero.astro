@@ -5,8 +5,8 @@ import twoCams from '../../public/ilford35-2-5.png';
 <section class='hero'>
   <div class='container'>
     <div class='left'>
-      <h2>Shoot Your Shot</h2>
-      <p>Show the world the way you see it!</p>
+      <h2>Shoot your favorite 35mm film again and again.</h2>
+      <p>Lightweight. Pocket-sized. Reusable.</p>
       <div class='buttons'>
         <a href='' class='btn'>Buy Now</a>
         <a href='' class='btn learn-btn'>Learn More</a>
@@ -22,14 +22,13 @@ import twoCams from '../../public/ilford35-2-5.png';
   .hero {
     display: flex;
     justify-content: center;
-    padding: 3rem 0;
   }
 
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
+    padding-left: 2.2rem;
   }
 
   .left {
@@ -40,8 +39,9 @@ import twoCams from '../../public/ilford35-2-5.png';
 
   .left h2 {
     font-size: 3rem;
-    font-weight: 500;
-    margin-bottom: -1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
   }
 
   .left p {
@@ -50,19 +50,21 @@ import twoCams from '../../public/ilford35-2-5.png';
   .buttons {
     display: flex;
     gap: 1rem;
+    margin-top: 1.5rem;
   }
 
   .btn {
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 1.6rem;
     border-radius: 100px;
     background-color: #f72585;
     text-align: center;
-    font-size: 18px;
+    font-size: 22px;
+    font-weight: 500;
     color: #faf9f9;
   }
   .learn-btn {
     color: #f72585;
-    background-color: #faf9f9;
+    background-color: transparent;
     border: 1px solid #f72585;
   }
 
@@ -78,9 +80,15 @@ import twoCams from '../../public/ilford35-2-5.png';
 
     .container {
       flex-direction: column-reverse;
+      padding-left: 0;
     }
     .right {
       margin-bottom: 4rem;
+    }
+
+    .left h2,
+    .left p {
+      text-align: center;
     }
 
     .left h2 {
