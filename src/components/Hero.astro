@@ -1,9 +1,106 @@
 ---
+import twoCams from '../../public/ilford35-2-5.png';
 ---
 
-<section>
+<section class='hero'>
   <div class='container'>
-    <div class='left'></div>
-    <div class='right'></div>
+    <div class='left'>
+      <h2>Shoot Your Shot</h2>
+      <p>Show the world the way you see it!</p>
+      <div class='buttons'>
+        <a href='' class='btn'>Buy Now</a>
+        <a href='' class='btn learn-btn'>Learn More</a>
+      </div>
+    </div>
+    <div class='right'>
+      <img src={twoCams} alt='' />
+    </div>
   </div>
 </section>
+
+<style>
+  .hero {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: -1.3rem;
+  }
+
+  .left p {
+    font-size: 1.8rem;
+  }
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.2rem 1rem;
+    border-radius: 100px;
+    background-color: #f72585;
+    text-align: center;
+    font-size: 18px;
+    color: #faf9f9;
+  }
+  .learn-btn {
+    color: #f72585;
+    background-color: #faf9f9;
+    border: 1px solid #f72585;
+  }
+
+  .right img {
+    flex: 1;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1075px) {
+    .hero {
+      padding: 0;
+    }
+
+    .container {
+      flex-direction: column-reverse;
+    }
+    .right {
+      margin-bottom: 4rem;
+    }
+
+    .left h2 {
+      font-size: 2rem;
+    }
+
+    .left p {
+      font-size: 1rem;
+      margin-top: 0.3rem;
+    }
+    .buttons {
+      margin-top: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+    }
+
+    .left {
+      align-items: center;
+    }
+  }
+</style>
