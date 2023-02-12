@@ -1,5 +1,6 @@
 ---
 import twoCams from '../../public/ilford35-2-5.png';
+import Button from './Button.astro';
 ---
 
 <section class='hero'>
@@ -8,8 +9,8 @@ import twoCams from '../../public/ilford35-2-5.png';
       <h2>Shoot your favorite 35mm film and keep the camera.</h2>
       <p>Lightweight. Pocket-sized. Reusable.</p>
       <div class='buttons'>
-        <a href='' class='btn'>Buy Now</a>
-        <a href='#about' class='btn learn-btn'>Learn More</a>
+        <Button type='primary' text='Buy Now' />
+        <Button type='secondary' text='Learn More' />
       </div>
     </div>
     <div class='right'>
@@ -23,20 +24,17 @@ import twoCams from '../../public/ilford35-2-5.png';
     display: flex;
     justify-content: center;
   }
-
   .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 2.2rem;
   }
-
   .left {
     flex: 1;
     display: flex;
     flex-direction: column;
   }
-
   .left h2 {
     font-size: 3rem;
     font-weight: 700;
@@ -52,22 +50,6 @@ import twoCams from '../../public/ilford35-2-5.png';
     gap: 1rem;
     margin-top: 1.5rem;
   }
-
-  .btn {
-    padding: 0.2rem 1.6rem;
-    border-radius: 100px;
-    background-color: var(--button-color);
-    text-align: center;
-    font-size: 22px;
-    font-weight: 500;
-    color: #faf9f9;
-  }
-  .learn-btn {
-    color: var(--button-color);
-    background-color: transparent;
-    border: 1px solid var(--button-color);
-  }
-
   .right img {
     flex: 1;
     max-width: 100%;

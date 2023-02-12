@@ -1,7 +1,115 @@
-<div class='card'>
-  <div class='col'></div>
-  <div class='col'></div>
-  <div class='col'></div>
-  <div class='col'></div>
-  <div class='col'></div>
-</div>
+---
+---
+
+<table>
+  <caption>Recommended film ISO</caption>
+  <thead>
+    <tr>
+      <th>Environment</th>
+      <th>Flash</th>
+      <th>ISO 200</th>
+      <th>ISO 400</th>
+      <th>ISO 800</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><i class='ph-sun'></i></td>
+      <td>Off</td>
+      <td><i class='ph-warning-circle'></i></td>
+      <td><i class='ph-check-circle'></i></td>
+      <td><i class='ph-check-circle'></i></td>
+    </tr>
+    <tr>
+      <td><i class='ph-cloud'></i></td>
+      <td>On</td>
+      <td><i class='ph-x-circle'></i></td>
+      <td><i class='ph-warning-circle'></i></td>
+      <td><i class='ph-check-circle'></i></td>
+    </tr>
+    <tr>
+      <td><i class='ph-house'></i></td>
+      <td>On</td>
+      <td><i class='ph-x-circle'></i></td>
+      <td><i class='ph-warning-circle'></i></td>
+      <td><i class='ph-check-circle'></i></td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  table {
+    margin-top: 2rem;
+    background-color: rgb(255, 240, 246, 0.8);
+    border-radius: 25px;
+    width: 80%;
+  }
+
+  caption {
+    margin-bottom: 1rem;
+  }
+
+  th,
+  td {
+    padding: 1.8rem 0;
+    font-size: 1.2rem;
+  }
+
+  i {
+    font-size: 2.6rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr,
+    caption {
+      display: block;
+    }
+
+    caption {
+      vertical-align: center;
+      padding: 1rem 0;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      border: 1px solid #ccc;
+    }
+
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before {
+      content: 'Environment';
+    }
+  }
+</style>
+
+<script src='https://unpkg.com/phosphor-icons'></script>

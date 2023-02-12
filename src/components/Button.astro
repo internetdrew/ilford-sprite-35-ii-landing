@@ -1,0 +1,33 @@
+---
+interface Props {
+  type: string;
+  text: string;
+}
+
+const { type, text } = Astro.props;
+---
+
+<a href='' class={`btn ${type === 'secondary' && 'secondary'}`}>{text}</a>
+
+<style>
+  .btn {
+    padding: 0.2rem 1.6rem;
+    border-radius: 100px;
+    background-color: var(--button-color);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #faf9f9;
+  }
+  .secondary {
+    color: var(--button-color);
+    background-color: transparent;
+    border: 1px solid var(--button-color);
+  }
+
+  @media (max-width: 1075px) {
+    .btn {
+      padding: 0.2rem 1.6rem;
+    }
+  }
+</style>

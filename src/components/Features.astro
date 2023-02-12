@@ -1,5 +1,6 @@
 ---
 import spriteWithFilm from '../../public/sprite-film.jpg';
+import Button from './Button.astro';
 ---
 
 <section>
@@ -12,6 +13,7 @@ import spriteWithFilm from '../../public/sprite-film.jpg';
       </p>
       <img src={spriteWithFilm} alt='' />
     </div>
+    <Button type='primary' text='Buy Now' />
   </div>
 </section>
 
@@ -19,8 +21,8 @@ import spriteWithFilm from '../../public/sprite-film.jpg';
   section {
     display: flex;
     justify-content: center;
-    padding: 12rem 0;
     text-align: center;
+    margin-top: 10rem;
   }
   .story {
     font-size: 1.6rem;
@@ -37,7 +39,7 @@ import spriteWithFilm from '../../public/sprite-film.jpg';
     max-width: 100%;
     object-fit: contain;
     border-radius: 20px;
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 
   @media (max-width: 1075px) {
