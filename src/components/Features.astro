@@ -1,0 +1,55 @@
+---
+import spriteWithFilm from '../../public/sprite-film.jpg';
+---
+
+<section>
+  <div class='container'>
+    <div id='for-newbies'>
+      <h2 class='heading'>For newbies, pros and everyone in-between</h2>
+      <p class='story'>
+        Forget shutter speeds, aperture, or light meters — just load a roll of
+        film and hit the shutter button.
+      </p>
+      <img src={spriteWithFilm} alt='' />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    padding: 12rem 0;
+    text-align: center;
+  }
+  .story {
+    font-size: 1.6rem;
+  }
+
+  #for-newbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container img {
+    width: 40rem;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1075px) {
+    .container h2 {
+      font-size: 2rem;
+    }
+
+    .container p {
+      font-size: 1.4rem;
+      margin-top: 0.3rem;
+    }
+  }
+</style>
+
+<script src='https://cdn.lordicon.com/ritcuqlt.js'></script>

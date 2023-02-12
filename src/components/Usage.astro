@@ -1,0 +1,53 @@
+---
+import Card from './Card.astro';
+---
+
+<section>
+  <div class='container'>
+    <div id='best-shot'>
+      <h2 class='heading'>Take Your Best Shot</h2>
+      <p class='story'>The right film to get the job done.</p>
+      <img src={} alt='' />
+    </div>
+    <Card />
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    padding: 8rem 0;
+    text-align: center;
+  }
+  .story {
+    font-size: 1.6rem;
+  }
+
+  #best-shot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container img {
+    width: 40rem;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1075px) {
+    .container h2 {
+      font-size: 2rem;
+    }
+
+    .container p {
+      font-size: 1.4rem;
+      margin-top: 0.3rem;
+    }
+  }
+</style>
+
+<script src='https://cdn.lordicon.com/ritcuqlt.js'></script>

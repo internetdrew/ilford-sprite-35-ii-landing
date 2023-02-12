@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  --button-color: #c92a2a;
+}
 
 *,
 *::after,
@@ -15,4 +18,16 @@ body {
 
 .container {
   max-width: 85%;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 95%;
+  }
 }

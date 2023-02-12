@@ -5,11 +5,11 @@ import twoCams from '../../public/ilford35-2-5.png';
 <section class='hero'>
   <div class='container'>
     <div class='left'>
-      <h2>Shoot your favorite 35mm film again and again.</h2>
+      <h2>Shoot your favorite 35mm film and keep the camera.</h2>
       <p>Lightweight. Pocket-sized. Reusable.</p>
       <div class='buttons'>
         <a href='' class='btn'>Buy Now</a>
-        <a href='' class='btn learn-btn'>Learn More</a>
+        <a href='#about' class='btn learn-btn'>Learn More</a>
       </div>
     </div>
     <div class='right'>
@@ -56,21 +56,31 @@ import twoCams from '../../public/ilford35-2-5.png';
   .btn {
     padding: 0.2rem 1.6rem;
     border-radius: 100px;
-    background-color: #f72585;
+    background-color: var(--button-color);
     text-align: center;
     font-size: 22px;
     font-weight: 500;
     color: #faf9f9;
   }
   .learn-btn {
-    color: #f72585;
+    color: var(--button-color);
     background-color: transparent;
-    border: 1px solid #f72585;
+    border: 1px solid var(--button-color);
   }
 
   .right img {
     flex: 1;
     max-width: 100%;
+  }
+
+  @media (min-width: 1670px) {
+    .left {
+      max-width: 45%;
+    }
+
+    .container {
+      max-width: 75%;
+    }
   }
 
   @media (max-width: 1075px) {
@@ -96,15 +106,16 @@ import twoCams from '../../public/ilford35-2-5.png';
     }
 
     .left p {
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin-top: 0.3rem;
     }
     .buttons {
       margin-top: 1rem;
+      flex-direction: column;
     }
 
     .btn {
-      padding: 0.5rem 1rem;
+      padding: 0.2rem 1.6rem;
     }
 
     .left {
