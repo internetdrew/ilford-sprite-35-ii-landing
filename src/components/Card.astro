@@ -54,11 +54,30 @@ const { iconClass, label, flash } = Astro.props;
   .card {
     display: flex;
     flex-direction: column;
-    background-color: #f7f5ff;
+    background: rgb(255, 255, 255);
+    background: rgb(238, 184, 184);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(238, 184, 184, 1) 0%,
+      rgba(32, 156, 196, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(238, 184, 184, 1) 0%,
+      rgba(32, 156, 196, 1) 100%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(238, 184, 184, 0.7) 0%,
+      rgba(32, 156, 196, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeb8b8",endColorstr="#209cc4",GradientType=1);
     border-radius: 25px;
     padding: 1rem 2rem;
-    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
+    /* color: #fff; */
   }
 
   .card-heading {

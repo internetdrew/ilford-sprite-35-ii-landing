@@ -16,14 +16,25 @@ const { type, text } = Astro.props;
     background-color: var(--button-color);
     text-align: center;
     font-size: 1.4rem;
-    font-weight: 500;
-    color: #090a0b;
-    border: solid 2px #090a0b;
+    font-weight: 700;
+    color: #ced4da;
+    border: solid 3px #212529;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  .btn:hover:not(.secondary) {
+    box-shadow: 5px 6px 8px 0 rgba(0, 0, 0, 0.24),
+      0 8px 25px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:active {
+    transform: scale(0.9);
   }
   .secondary {
     color: var(--button-color);
     background-color: transparent;
-    border: 1px solid var(--button-color);
+    border: none;
   }
 
   @media (max-width: 1075px) {
