@@ -7,7 +7,6 @@ import Card from './Card.astro';
     <div id='best-shot'>
       <h2 class='heading'>Take Your Best Shot</h2>
       <p class='story'>The right film to get the job done.</p>
-      <img src={} alt='' />
     </div>
     <div class='cards-container'>
       <Card iconClass='ph-sun' label='Sunny' flash={false} />
@@ -52,7 +51,7 @@ import Card from './Card.astro';
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 6rem;
+    gap: 4rem;
     padding: 2rem;
   }
 
@@ -71,6 +70,9 @@ import Card from './Card.astro';
     .cards-container {
       width: 80%;
       grid-template-columns: 1fr;
+    }
+    section {
+      margin-top: 6rem;
     }
   }
 </style>
