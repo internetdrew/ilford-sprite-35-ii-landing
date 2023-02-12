@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
 :root {
   --button-color: #0b7285;
+  --color-bg: #f1f3f5;
 }
 
 *,
@@ -12,7 +13,7 @@
 }
 
 body {
-  background-color: #ced4da;
+  background-color: var(--color-bg);
   color: #212529;
   font-family: 'Open Sans', sans-serif;
 }
