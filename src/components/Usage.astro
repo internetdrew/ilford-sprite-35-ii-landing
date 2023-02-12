@@ -9,7 +9,11 @@ import Card from './Card.astro';
       <p class='story'>The right film to get the job done.</p>
       <img src={} alt='' />
     </div>
-    <Card />
+    <div class='cards-container'>
+      <Card iconClass='ph-sun' label='Sunny' flash={false} />
+      <Card iconClass='ph-cloud' label='Cloudy' flash={true} />
+      <Card iconClass='ph-house' label='Indoors' flash={true} />
+    </div>
   </div>
 </section>
 
@@ -44,6 +48,14 @@ import Card from './Card.astro';
     margin-top: 2rem;
   }
 
+  .cards-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    padding: 2rem;
+  }
+
   @media (max-width: 1075px) {
     .container h2 {
       font-size: 2rem;
@@ -52,6 +64,13 @@ import Card from './Card.astro';
     .container p {
       font-size: 1.4rem;
       margin-top: 0.3rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .cards-container {
+      width: 80%;
+      grid-template-columns: 1fr;
     }
   }
 </style>
