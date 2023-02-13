@@ -1,21 +1,21 @@
 ---
 interface Props {
-  iconClass?: string;
+  iconSource?: string;
   label?: string;
   flash?: boolean;
 }
 
-const { iconClass, label, flash } = Astro.props;
+const { iconSource, label, flash } = Astro.props;
 ---
 
 <div class='card'>
-  {(!iconClass || !label) && <slot />}
+  {(!iconSource || !label) && <slot />}
   {
-    iconClass && label && (
+    iconSource && label && (
       <>
         <h3 class='card-heading'>
           <span>
-            <i class={iconClass} />
+            <img src={iconSource} alt='' class='icon' />
           </span>
           {label}
         </h3>
@@ -28,9 +28,9 @@ const { iconClass, label, flash } = Astro.props;
             <h4 class='category'>ISO 200</h4>
             <div class='value'>
               {label.toLocaleLowerCase() === 'sunny' ? (
-                <i class='ph-warning-circle' />
+                <img src='/public/warning-circle.png' alt='' class='icon' />
               ) : (
-                <i class='ph-x-circle' />
+                <img src='/public/x-circle.png' alt='' class='icon' />
               )}
             </div>
           </div>
@@ -38,16 +38,16 @@ const { iconClass, label, flash } = Astro.props;
             <h4 class='category'>ISO 400</h4>
             <div class='value'>
               {label.toLocaleLowerCase() === 'sunny' ? (
-                <i class='ph-check-circle' />
+                <img src='/public/check-circle.png' alt='' class='icon' />
               ) : (
-                <i class='ph-warning-circle' />
+                <img src='/public/warning-circle.png' alt='' class='icon' />
               )}
             </div>
           </div>
           <div class='row'>
             <h4 class='category'>ISO 800</h4>
             <div class='value'>
-              <i class='ph-check-circle' />
+              <img src='/public/check-circle.png' alt='' class='icon' />
             </div>
           </div>
         </div>
@@ -80,6 +80,10 @@ const { iconClass, label, flash } = Astro.props;
     font-size: 2rem;
   }
 
+  .icon {
+    font-size: 1rem;
+  }
+
   .card-details .row {
     display: flex;
     justify-content: space-between;
@@ -94,6 +98,11 @@ const { iconClass, label, flash } = Astro.props;
     text-align: center;
     font-size: 1.6rem;
   }
+
+  .icon {
+    width: 2rem;
+  }
+
   .card-heading i:hover {
     -webkit-animation-name: wiggle;
     -ms-animation-name: wiggle;
@@ -159,5 +168,3 @@ const { iconClass, label, flash } = Astro.props;
     }
   }
 </style>
-
-<script src='https://unpkg.com/phosphor-icons'></script>
