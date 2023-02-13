@@ -1,5 +1,9 @@
 ---
 import Card from './Card.astro';
+
+import sunIcon from '/sun.png';
+import cloudIcon from '/cloud.png';
+import houseIcon from '/house.png';
 ---
 
 <section>
@@ -9,9 +13,9 @@ import Card from './Card.astro';
       <p class='story'>And take the guesswork out of which film to use.</p>
     </div>
     <div class='cards-container'>
-      <Card iconSource='/public/sun.png' label='Sunny' flash={false} />
-      <Card iconSource='/public/cloud.png' label='Cloudy' flash={true} />
-      <Card iconSource='/public/house.png' label='Indoors' flash={true} />
+      <Card iconSource={sunIcon} label='Sunny' flash={false} />
+      <Card iconSource={cloudIcon} label='Cloudy' flash={true} />
+      <Card iconSource={houseIcon} label='Indoors' flash={true} />
     </div>
   </div>
 </section>
