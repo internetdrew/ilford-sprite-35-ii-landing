@@ -90,7 +90,7 @@ const formatStr = (str: string) => {
   }
 
   .section-intro p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .specs {
@@ -116,6 +116,15 @@ const formatStr = (str: string) => {
     }
     .row {
       flex-direction: column;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 1075px) {
+    .heading {
+      font-size: 1.6rem;
+    }
+    .section-intro p {
       font-size: 1.2rem;
     }
   }
