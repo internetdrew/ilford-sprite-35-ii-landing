@@ -1,53 +1,59 @@
 ---
 interface Props {
-  iconClass: string;
-  label: string;
-  flash: boolean;
+  iconClass?: string;
+  label?: string;
+  flash?: boolean;
 }
 
 const { iconClass, label, flash } = Astro.props;
 ---
 
 <div class='card'>
-  <h3 class='card-heading'>
-    <span>
-      <i class={iconClass}></i>
-    </span>{label}
-  </h3>
-  <div class='card-details'>
-    <div class='row'>
-      <h4 class='category'>Flash</h4>
-      <div class='value'>{flash ? 'On' : 'Off'}</div>
-    </div>
-    <div class='row'>
-      <h4 class='category'>ISO 200</h4>
-      <div class='value'>
-        {
-          label.toLocaleLowerCase() === 'sunny' ? (
-            <i class='ph-warning-circle' />
-          ) : (
-            <i class='ph-x-circle' />
-          )
-        }
-      </div>
-    </div>
-    <div class='row'>
-      <h4 class='category'>ISO 400</h4>
-      <div class='value'>
-        {
-          label.toLocaleLowerCase() === 'sunny' ? (
-            <i class='ph-check-circle' />
-          ) : (
-            <i class='ph-warning-circle' />
-          )
-        }
-      </div>
-    </div>
-    <div class='row'>
-      <h4 class='category'>ISO 800</h4>
-      <div class='value'><i class='ph-check-circle'></i></div>
-    </div>
-  </div>
+  {(!iconClass || !label) && <slot />}
+  {
+    iconClass && label && (
+      <>
+        <h3 class='card-heading'>
+          <span>
+            <i class={iconClass} />
+          </span>
+          {label}
+        </h3>
+        <div class='card-details'>
+          <div class='row'>
+            <h4 class='category'>Flash</h4>
+            <div class='value'>{flash ? 'On' : 'Off'}</div>
+          </div>
+          <div class='row'>
+            <h4 class='category'>ISO 200</h4>
+            <div class='value'>
+              {label.toLocaleLowerCase() === 'sunny' ? (
+                <i class='ph-warning-circle' />
+              ) : (
+                <i class='ph-x-circle' />
+              )}
+            </div>
+          </div>
+          <div class='row'>
+            <h4 class='category'>ISO 400</h4>
+            <div class='value'>
+              {label.toLocaleLowerCase() === 'sunny' ? (
+                <i class='ph-check-circle' />
+              ) : (
+                <i class='ph-warning-circle' />
+              )}
+            </div>
+          </div>
+          <div class='row'>
+            <h4 class='category'>ISO 800</h4>
+            <div class='value'>
+              <i class='ph-check-circle' />
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
 </div>
 
 <style>
@@ -56,24 +62,9 @@ const { iconClass, label, flash } = Astro.props;
     flex-direction: column;
     border: 1px solid rgb(128, 128, 128, 0.8);
     background: #f8f9fa;
-    /* background: #f8f9fa; 
-    background: -webkit-linear-gradient(
-      to right,
-      #e2e2e2,
-      #c9d6ff
-    ); 
-    background: linear-gradient(
-      to right,
-      #e2e2e2,
-      #c9d6ff
-    );  */
-
     border-radius: 25px;
     padding: 1rem 2rem;
-    /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2),
-      0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.2);
-    /* color: #fff; */
   }
 
   .card-heading {

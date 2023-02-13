@@ -1,5 +1,5 @@
 ---
-import twoCams from '../../public/sprite-hero-hd.png';
+import twoCams from '/sprite-hero-hd.png';
 import Button from './Button.astro';
 ---
 
@@ -35,6 +35,7 @@ import Button from './Button.astro';
     flex: 1;
     display: flex;
     flex-direction: column;
+    max-width: 45%;
   }
   .left h2 {
     font-size: 3rem;
@@ -51,8 +52,10 @@ import Button from './Button.astro';
     gap: 1rem;
     margin-top: 1.5rem;
   }
-  .right img {
+  .right {
     flex: 1;
+  }
+  .right img {
     width: 100%;
     height: auto;
   }

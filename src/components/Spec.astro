@@ -1,0 +1,122 @@
+---
+import Card from './Card.astro';
+
+const specs = [
+  {
+    feature: 'optical lens',
+    value: '31mm, F=9 , 1 element',
+  },
+  {
+    feature: 'focusing',
+    value: 'Focus Free, 1m — ∞',
+  },
+  {
+    feature: 'shutter speed',
+    value: 'Shutter 1 / 120s',
+  },
+  {
+    feature: 'flash time',
+    value: 'Built-in Flash Push Switch — 15s recycle',
+  },
+  {
+    feature: 'film transport',
+    value: 'Manual wind and rewind',
+  },
+  {
+    feature: 'film format',
+    value: '135 Film (24x36mm)  ISO 200 / 400 / 800',
+  },
+  {
+    feature: 'view finder',
+    value: 'Field = 70%',
+  },
+  {
+    feature: 'strap',
+    value: 'Wrist strap included',
+  },
+  {
+    feature: 'power source',
+    value: '1 AAA — Alkaline Battery (required)',
+  },
+  {
+    feature: 'camera body material',
+    value: 'ABS',
+  },
+  {
+    feature: 'weght',
+    value: '122 grams',
+  },
+  {
+    feature: 'dimensions',
+    value: '119 (W) x 67 (H) x 44 (D) mm',
+  },
+];
+
+const formatStr = (str: string) => {
+  return str
+    .split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(' ');
+};
+---
+
+<section>
+  <div class='container'>
+    <div class='section-intro'>
+      <h2 class='heading'>Spec-Tacular</h2>
+      <p>We'll show you what we're workin' with!</p>
+    </div>
+    <div class='specs'>
+      <Card>
+        {
+          specs.map(spec => (
+            <div class='row'>
+              <div class='feature'>{formatStr(spec.feature)}</div>
+              <div class='value'>{spec.value}</div>
+            </div>
+          ))
+        }
+      </Card>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  .section-intro p {
+    font-size: 1.6rem;
+  }
+
+  .specs {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+  .row .feature {
+    font-weight: 700;
+  }
+
+  @media (max-width: 945px) {
+    .specs {
+      max-width: 100%;
+    }
+    .row {
+      flex-direction: column;
+      font-size: 1.2rem;
+    }
+  }
+</style>
