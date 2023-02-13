@@ -16,6 +16,23 @@ const { title } = Astro.props;
       name='description'
       content='A rebuild of the Ilford Sprite 35-II camera page, done by Andrew Rowley as a project to demonstrate ways to improve site performance.'
     />
+    <meta property='og:title' content={title} />
+    <meta property='og:type' content='website' />
+    <meta
+      property='og:image'
+      content='https://image.shopmoment.com/resizer?quality=75&width=1500&image=https://image.shopmoment.com/general/momentist/sprite_screengrab_2.jpg'
+    />
+    <meta
+      property='og:url'
+      content='https://ilford-sprite-35-ii-landing.vercel.app/'
+    />
+    <meta name='twitter:card' content='summary_large_image' />
+
+    <meta property='og:site_name' content={title} />
+    <meta
+      name='twitter:image:alt'
+      content='The Ilford Sprite 35-II in the wild'
+    />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
