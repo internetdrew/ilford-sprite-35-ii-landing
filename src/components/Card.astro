@@ -2,6 +2,7 @@
 import sunIcon from '/public/sun.png';
 import warningCircle from '/public/warning-circle.png';
 import xCircle from '/public/x-circle.png';
+import checkCircle from '/public/check-circle.png';
 
 interface Props {
   iconSource?: string;
@@ -42,16 +43,16 @@ const { iconSource, label, flash } = Astro.props;
             <h4 class='category'>ISO 400</h4>
             <div class='value'>
               {label.toLocaleLowerCase() === 'sunny' ? (
-                <img src='/public/check-circle.png' alt='' class='icon' />
+                <img src={checkCircle} alt='' class='icon' />
               ) : (
-                <img src='/public/warning-circle.png' alt='' class='icon' />
+                <img src={warningCircle} alt='' class='icon' />
               )}
             </div>
           </div>
           <div class='row'>
             <h4 class='category'>ISO 800</h4>
             <div class='value'>
-              <img src='/public/check-circle.png' alt='' class='icon' />
+              <img src={checkCircle} alt='' class='icon' />
             </div>
           </div>
         </div>
