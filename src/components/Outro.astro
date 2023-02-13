@@ -7,7 +7,7 @@ import Button from './Button.astro';
   <div class='container'>
     <div class='section-heading'>
       <h2 class='heading'>Adventure Awaits</h2>
-      <p>We'll capture the moments you'll never want to forget.</p>
+      <p>Live it up! We'll capture the moments you'll never want to forget.</p>
     </div>
     <div class='image-container'>
       <img src={inTheWild} alt='' />
@@ -23,7 +23,12 @@ import Button from './Button.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10rem 0;
+    margin: 10rem 0 2rem 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
   }
 
   .heading {
@@ -36,7 +41,15 @@ import Button from './Button.astro';
   }
 
   .image-container {
-    padding: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-container img {
+    object-fit: contain;
+    border-radius: 20px;
   }
 
   .button-container {
