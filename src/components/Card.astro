@@ -28,9 +28,13 @@ const { iconSource, label, flash } = Astro.props;
             <h4 class='category'>ISO 200</h4>
             <div class='value'>
               {label.toLocaleLowerCase() === 'sunny' ? (
-                <img src='/public/warning-circle.png' alt='' class='icon' />
+                <img
+                  src='../../public/warning-circle.png'
+                  alt=''
+                  class='icon'
+                />
               ) : (
-                <img src='/public/x-circle.png' alt='' class='icon' />
+                <img src='../../public/x-circle.png' alt='' class='icon' />
               )}
             </div>
           </div>
