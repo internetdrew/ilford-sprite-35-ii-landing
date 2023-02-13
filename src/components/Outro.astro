@@ -1,0 +1,55 @@
+---
+import inTheWild from '/public/sprite-in-wild.webp';
+import Button from './Button.astro';
+---
+
+<section>
+  <div class='container'>
+    <div class='section-heading'>
+      <h2 class='heading'>Adventure Awaits</h2>
+      <p>We'll capture the moments you'll never want to forget.</p>
+    </div>
+    <div class='image-container'>
+      <img src={inTheWild} alt='' />
+    </div>
+    <div class='button-container'>
+      <Button type='primary' text='Buy Now' />
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem 0;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .section-heading p {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .image-container {
+    padding: 2rem;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .heading {
+      font-size: 1.6rem;
+    }
+    .section-heading p {
+      font-size: 1.2rem;
+    }
+  }
+</style>
