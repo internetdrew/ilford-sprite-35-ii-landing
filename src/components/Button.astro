@@ -2,12 +2,16 @@
 interface Props {
   type: string;
   text: string;
+  anchor?: string;
 }
 
-const { type, text } = Astro.props;
+const { type, text, anchor } = Astro.props;
 ---
 
-<a href='' class={`btn ${type === 'secondary' && 'secondary'}`}>{text}</a>
+<a
+  href={`#${anchor && anchor}`}
+  class={`btn ${type === 'secondary' && 'secondary'}`}>{text}</a
+>
 
 <style>
   .btn {
