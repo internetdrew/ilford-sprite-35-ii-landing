@@ -10,17 +10,11 @@ export const post = async ({ redirect }) => {
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
         price_data: {
+          product: 'prod_NZhBzSSYRND5HA',
           currency: 'usd',
-          product_data: {
-            name: 'Ilford Sprite 35II Camera',
-            images: [
-              'https://image.shopmoment.com/general/momentist/spritecamera-1.jpg',
-            ],
-          },
           unit_amount: 2895,
         },
         quantity: 1,
-        adjustable_quantity: { enabled: true, minimum: 1, maximum: 10 },
       },
     ],
     custom_text: {
