@@ -20,6 +20,7 @@ body {
   background-color: var(--color-bg);
   color: #212529;
   font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
 }
 
 .container {

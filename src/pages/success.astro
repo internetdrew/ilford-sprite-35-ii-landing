@@ -1,0 +1,67 @@
+---
+---
+
+<section>
+  <div>
+    <h1>Thank you for checking out my project!</h1>
+    <p>Want to see more of what I'm working on?</p>
+    <a href='http://internetdrew.com' target='_blank' class='bounce-4'
+      >Check out my portfolio</a
+    >
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: clamp(30px, 5vw, 40px);
+    font-weight: 700;
+  }
+  p {
+    font-size: clamp(20px, 5vw, 30px);
+    font-weight: 400;
+  }
+
+  a {
+    font-size: clamp(20px, 8vw, 30px);
+    font-weight: 400;
+    color: rgb(219 39 119);
+    align-self: center;
+  }
+
+  .bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+  }
+  @keyframes bounce-4 {
+    0% {
+      transform: scale(1, 1) translateY(0);
+    }
+    10% {
+      transform: scale(1.1, 0.9) translateY(0);
+    }
+    30% {
+      transform: scale(0.9, 1.1) translateY(-100px);
+    }
+    50% {
+      transform: scale(1, 1) translateY(0);
+    }
+    100% {
+      transform: scale(1, 1) translateY(0);
+    }
+  }
+</style>
