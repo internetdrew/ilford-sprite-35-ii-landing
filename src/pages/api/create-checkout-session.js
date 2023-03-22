@@ -30,7 +30,7 @@ export const post = async ({ redirect }) => {
       },
     },
     mode: 'payment',
-    success_url: `${baseUrl}/success.html`,
+    success_url: `${baseUrl}/success`,
     cancel_url: `${baseUrl}`,
   });
 
