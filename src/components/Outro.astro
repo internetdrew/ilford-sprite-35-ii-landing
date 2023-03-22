@@ -13,7 +13,9 @@ import Button from './Button.astro';
       <img src={inTheWild} alt='' />
     </div>
     <div class='button-container'>
-      <Button type='primary' text='Buy Now' />
+      <form action='/api/create-checkout-session' method='POST'>
+        <Button type='primary' text='Buy Now' />
+      </form>
     </div>
   </div>
 </section>

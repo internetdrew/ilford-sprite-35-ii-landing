@@ -9,7 +9,9 @@ import Button from './Button.astro';
       <h2>Shoot your favorite 35mm film and keep the camera.</h2>
       <p>Lightweight. Pocket-sized. Reusable.</p>
       <div class='buttons'>
-        <Button type='primary' text='Buy Now' />
+        <form action='/api/create-checkout-session' method='POST'>
+          <Button type='primary' text='Buy Now' />
+        </form>
         <Button type='secondary' text='Learn More' anchor='for-newbies' />
       </div>
     </div>
