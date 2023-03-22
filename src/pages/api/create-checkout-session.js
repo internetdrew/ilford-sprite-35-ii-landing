@@ -31,7 +31,7 @@ export const post = async ({ redirect }) => {
     },
     mode: 'payment',
     success_url: `${baseUrl}/success.html`,
-    cancel_url: `${baseUrl}/cancel.html`,
+    cancel_url: `${baseUrl}`,
   });
 
   return redirect(session.url);
