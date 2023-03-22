@@ -1,13 +1,11 @@
 ---
 ---
 
-<section>
+<section id='canvas'>
   <div>
     <h1>Thank you for checking out my project!</h1>
     <p>Want to see more of what I'm working on?</p>
-    <a href='http://internetdrew.com' target='_blank' class='bounce-4'
-      >Check out my portfolio</a
-    >
+    <a href='http://internetdrew.com' target='_blank'>Check out my portfolio</a>
   </div>
 </section>
 
@@ -28,40 +26,34 @@
   }
 
   h1 {
-    font-size: clamp(30px, 5vw, 40px);
+    font-size: clamp(2rem, 5vw, 2.8rem);
     font-weight: 700;
   }
   p {
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     font-weight: 400;
   }
 
   a {
-    font-size: clamp(20px, 8vw, 30px);
+    font-size: clamp(1.8rem, 8vw, 2rem);
     font-weight: 400;
     color: rgb(219 39 119);
     align-self: center;
+    transition: all;
+    transition-duration: 0.3s;
   }
 
-  .bounce-4 {
-    animation-name: bounce-4;
-    animation-timing-function: ease;
-  }
-  @keyframes bounce-4 {
-    0% {
-      transform: scale(1, 1) translateY(0);
-    }
-    10% {
-      transform: scale(1.1, 0.9) translateY(0);
-    }
-    30% {
-      transform: scale(0.9, 1.1) translateY(-100px);
-    }
-    50% {
-      transform: scale(1, 1) translateY(0);
-    }
-    100% {
-      transform: scale(1, 1) translateY(0);
-    }
+  a:hover {
+    scale: 1.1;
   }
 </style>
+
+<script>
+  import JSConfetti from 'js-confetti';
+
+  const jsConfetti = new JSConfetti();
+
+  jsConfetti.addConfetti();
+
+  const canvas = document.getElementById('canvas');
+</script>
