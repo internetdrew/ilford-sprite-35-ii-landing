@@ -8,10 +8,17 @@ interface Props {
 const { type, text, anchor } = Astro.props;
 ---
 
-<button
-  class={`btn ${type === 'secondary' && 'secondary'}`}
-  type={type === 'primary' ? 'submit' : 'button'}>{text}</button
->
+{
+  type === 'primary' ? (
+    <button class='btn' type='submit'>
+      {text}
+    </button>
+  ) : (
+    <button class='btn secondary' type='button'>
+      <a href='#for-newbies'>{text}</a>
+    </button>
+  )
+}
 
 <style>
   .btn {
